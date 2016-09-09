@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.min.css">
+    <script src="/node_modules/materialize-css/node_modules/jquery/dist/jquery.js"></script>
+    <script href="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>App</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <div class="nav-wrapper light-green darken-1">
+          <div class="container">
+            <a v-link="{name: 'app'}" class="brand-logo">App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a v-link="{name: 'app'}">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <router-view transition="fade" transition-mode="out-in"></router-view>
+      </div>
+    </div>
+    <script src="dist/build.js"></script>
+  </body>
+</html>
